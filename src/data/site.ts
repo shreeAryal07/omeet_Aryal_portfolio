@@ -30,6 +30,7 @@ export type Project = {
 }
 
 export const profilePhotoPath = '/images/profile.jpg'
+export const contactEmail = 'omeetaryal2007@gmail.com'
 
 export const navigation: NavItem[] = [
   { label: 'Home', href: '#home' },

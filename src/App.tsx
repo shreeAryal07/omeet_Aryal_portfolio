@@ -8,6 +8,7 @@ import {
   Database,
   FileSpreadsheet,
   GraduationCap,
+  Mail,
   Menu,
   Sparkles,
   X,
@@ -15,6 +16,7 @@ import {
 import { ProjectCard } from './components/ProjectCard'
 import { SectionHeader } from './components/SectionHeader'
 import {
+  contactEmail,
   experienceItems,
   navigation,
   profileHighlights,
@@ -183,7 +185,7 @@ function App() {
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <a
-                  href="#contact"
+                  href={`mailto:${contactEmail}`}
                   className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-200"
                 >
                   Connect With Me
@@ -440,6 +442,14 @@ function App() {
               </div>
 
               <div className="flex flex-wrap gap-3">
+                <a
+                  href={`mailto:${contactEmail}`}
+                  aria-label={`Email ${contactEmail}`}
+                  className="inline-flex max-w-full items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition hover:border-cyan-400 hover:text-cyan-200"
+                >
+                  <Mail className="h-4 w-4 shrink-0" aria-hidden="true" />
+                  <span className="break-all">{contactEmail}</span>
+                </a>
                 {socialLinks.map((link) => {
                   const Icon = iconMap[link.icon]
                   return (
